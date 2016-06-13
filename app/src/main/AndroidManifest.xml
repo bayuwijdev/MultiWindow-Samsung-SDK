@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bayuwpp.samplemultiwindowssamsungsdk">
+    <uses-permission android:name= "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- untuk membuat aplikasi ada di TrayBar UI MultiWIndow
+        -->
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable"
+            android:value="true" />
+        <!--pen-->
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.style"
+            android:value="forceTitleBar|fullscreenOnly" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
